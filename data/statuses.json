@@ -1,0 +1,4 @@
+{
+  "badInputStatus": 400,
+  "emailExistsStatus": 409
+}
