@@ -9,13 +9,13 @@ const {
   email,
   firstName,
   lastName,
-  scoredMovies,
+  scoredMovies
 } = users[0]
 beforeEach(setUpDB)
 const timeToWait = 20000
 
 describe('getting a user', () => {
-  test(
+  it(
     "shouldn't get unauth user",
     async () => {
       const { status } = await request(app).get(`/api/user`).send()
@@ -24,7 +24,7 @@ describe('getting a user', () => {
     timeToWait
   )
 
-  test(
+  it(
     'should get user',
     async () => {
       const { body: user } = await request(app)
@@ -34,9 +34,8 @@ describe('getting a user', () => {
       const userFix = {
         _id: _id.toString(),
         scoredMovies,
-        tokens: [],
         userDetails: { email, firstName, lastName },
-        __v: 0,
+        __v: 0
       }
       expect(user).toEqual(userFix)
     },

@@ -7,7 +7,7 @@ module.exports = router.patch('/', auth, updateMovieScore, (req, res) => {
   const {
     locals: { averageScoreObj }
   } = res
-  
+
   if (!averageScoreObj) return res.sendStatus(500)
   res.send(averageScoreObj)
 })

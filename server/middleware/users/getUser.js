@@ -7,6 +7,7 @@ module.exports = async (req, res, next) => {
 
   try {
     res.locals.user = await users.findById(userId)
+    
     next()
   } catch (e) {
     next()

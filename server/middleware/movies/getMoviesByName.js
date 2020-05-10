@@ -4,19 +4,19 @@ const mapMoviesResults = require('../../../utils/mapMoviesResults')
 
 module.exports = async (req, res, next) => {
   const {
-    params: { name: query },
+    params: { name: query }
   } = req
 
   const {
     data,
-    data: { results },
+    data: { results }
   } = await axios.get(`${moviesUrl}/search/movie`, {
     params: { query },
-    headers: { Authorization: `Bearer ${moviesToken}` },
+    headers: { Authorization: `Bearer ${moviesToken}` }
   })
   const relevantDataFromRes = mapMoviesResults(results)
-
-  res.locals.data = { ...data, relevantDataFromRes }
+  delete data.results
+  res.locals.data = { name: data.title, results: relevantDataFromRes, ...data }
 
   next()
   try {

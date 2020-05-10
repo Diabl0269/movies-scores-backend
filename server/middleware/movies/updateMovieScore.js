@@ -3,8 +3,9 @@ const users = require('../../../mongoDB/models/users')
 
 module.exports = async (req, res, next) => {
   const {
-    body: { score, name }
+    body: { score, movie }
   } = req
+
   if (score < 0 || score > 10) return res.sendStatus(400)
 
   try {
@@ -12,12 +13,12 @@ module.exports = async (req, res, next) => {
       locals: { userId }
     } = res
 
-    res.locals.averageScoreObj = await moviesScores.updateMovieScore(name, score, userId)
+    res.locals.averageScoreObj = await moviesScores.updateMovieScore(movie, score, userId)
 
     await users.updateMovieScore({ id: userId, score, name })
 
     next()
-  } catch (e) {
+  } catch (e) {        
     next()
   }
 }

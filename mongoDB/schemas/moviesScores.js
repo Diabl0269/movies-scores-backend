@@ -13,7 +13,9 @@ const schema = new Schema({
   averageScoreObj: {
     count: { type: Number, default: 0 },
     average: { type: Number, default: 0 }
-  }
+  },
+  genre_ids: [{ type: Number }],
+  releaseYear: { type: Number }
 })
 
 module.exports = schema

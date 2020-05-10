@@ -14,7 +14,7 @@ db.once('open', () => {
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false,
+  useFindAndModify: false
 })
 
 mongoose.set('useCreateIndex', true)

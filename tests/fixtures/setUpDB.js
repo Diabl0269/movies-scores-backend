@@ -1,7 +1,7 @@
 const Users = require('../../mongoDB/models/users')
 const MoviesScores = require('../../mongoDB/models/moviesScores')
 const usersFixtures = require('./users')
-const moviesScores = require('./moviesScores')
+const moviesScores = require('./movies')
 const mongoose = require('mongoose')
 const { dbUrl } = require('../../envConfig')
 

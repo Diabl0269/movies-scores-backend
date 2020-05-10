@@ -25,9 +25,12 @@ schema.pre('save', async function (next) {
 
 schema.methods.toJSON = function () {
   const user = this.toObject()
+  const { tokens } = user
+  const token = tokens[tokens.length - 1]  
+  delete user.tokens
   delete user.salt
   delete user.password
-  return user
+  return {...user, token}
 }
 
 const tokenLifeTime = 10000

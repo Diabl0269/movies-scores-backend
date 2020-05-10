@@ -1,5 +1,6 @@
 module.exports = (results) =>
   results.map((movie) => {
-    const { title, overview, poster_path } = movie
-    return { title, overview, poster_path }
+    const { title, genre_ids, release_date } = movie
+    const releaseYear = release_date.slice(0, 4)
+    return { name: title, genre_ids, releaseYear }
   })

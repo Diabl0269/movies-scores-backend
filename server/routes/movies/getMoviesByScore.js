@@ -6,5 +6,7 @@ module.exports = router.get('/:query', getMoviesByScore, (req, res) => {
   const {
     locals: { movies }
   } = res
-  movies ? res.send(movies) : res.sendStatus(500)
+
+  if (!movies) return res.sendStatus(500)
+  res.send(movies)
 })
