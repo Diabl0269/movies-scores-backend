@@ -1,0 +1,42 @@
+[
+  { "name": "Cabaret", "genre_ids": [18, 10402, 10749], "releaseYear": "1972" },
+  {
+    "name": "One Hundred and One Dalmatians",
+    "genre_ids": [12, 16, 35, 10751],
+    "releaseYear": "1961"
+  },
+  {
+    "name": "Campus Sleuth",
+    "genre_ids": [28, 12, 35, 80, 10402, 9648, 10749],
+    "releaseYear": "1948"
+  },
+  { "name": "Merrily We Roll Along", "genre_ids": [10402], "releaseYear": "2040" },
+  { "name": "Avatar 5", "genre_ids": [28, 12, 14, 878], "releaseYear": "2027" },
+  { "name": "Avatar 4", "genre_ids": [28, 12, 14, 878], "releaseYear": "2025" },
+  { "name": "Son Göktürk", "genre_ids": [], "releaseYear": "2025" },
+  { "name": "Doc Savage", "genre_ids": [28, 12], "releaseYear": "2024" },
+  { "name": "Fantastic Beasts 5", "genre_ids": [12, 14, 10751], "releaseYear": "2024" },
+  { "name": "Untitled Evel Knievel Project", "genre_ids": [18], "releaseYear": "2023" },
+  { "name": "Untitled G.I. Joe Project", "genre_ids": [28, 12, 878], "releaseYear": "2023" },
+  {
+    "name": "Untitled Kevin Hart/Malcolm D. Lee Action-Comedy",
+    "genre_ids": [28, 35],
+    "releaseYear": "2023"
+  },
+  { "name": "Avatar 3", "genre_ids": [28, 12, 18, 14, 878], "releaseYear": "2023" },
+  { "name": "Inevitable", "genre_ids": [10402, 14, 18, 10749], "releaseYear": "2023" },
+  { "name": "Kayara", "genre_ids": [12, 16, 10751], "releaseYear": "2023" },
+  { "name": "Letters from Rosemary", "genre_ids": [18], "releaseYear": "2023" },
+  {
+    "name": "Guardians of the Galaxy Vol. 3",
+    "genre_ids": [28, 12, 35, 878],
+    "releaseYear": "2023"
+  },
+  {
+    "name": "Untitled M. Night Shyamalan 2023 Thriller",
+    "genre_ids": [53],
+    "releaseYear": "2023"
+  },
+  { "name": "Seoul Girls", "genre_ids": [35], "releaseYear": "2022" },
+  { "name": "China Rich Girlfriend", "genre_ids": [35, 18, 10749], "releaseYear": "2022" }
+]

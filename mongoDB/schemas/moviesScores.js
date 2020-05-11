@@ -11,8 +11,8 @@ const schema = new Schema({
     }
   ],
   averageScoreObj: {
-    count: { type: Number, default: 0 },
-    average: { type: Number, default: 0 }
+    count: { type: Number, default: 0, required: true },
+    average: { type: Number, default: 0, required: true }
   },
   genre_ids: [{ type: Number }],
   releaseYear: { type: Number }

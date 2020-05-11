@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const getMoviesByScore = require('../../middleware/movies/getMoviesByScore')
+const getMovies = require('../../middleware/movies/getMovies')
 
-module.exports = router.get('/:query', getMoviesByScore, (req, res) => {
+module.exports = router.post('/', getMovies, (req, res) => {
   const {
     locals: { movies }
   } = res

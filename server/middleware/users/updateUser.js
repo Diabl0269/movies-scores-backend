@@ -13,12 +13,15 @@ module.exports = async (req, res, next) => {
     const isValidated = validataUserUpdate(body)
     if (!isValidated) throw 'Validation failed'
 
-    const { password } = body
-    const updateObj = { userDetails: body, password }
+    user = await users.findById(userId)
+    const { password, firstName, lastName, email } = body
+    if (firstName) user.userDetails.firstName = firstName
+    if (lastName) user.userDetails.lastName = lastName
+    if (email) user.userDetails.email = email
+    if (password) user.password = password
+    await user.save()
 
-    res.locals.user = await users.findByIdAndUpdate(userId, updateObj, {
-      new: true
-    })
+    res.locals.user = user
 
     next()
   } catch (e) {

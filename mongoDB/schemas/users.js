@@ -8,13 +8,13 @@ module.exports = new Schema({
   salt: {
     type: String,
     required: true,
-    default: crypto.randomBytes(Math.ceil(saltLength)).toString('hex'),
+    default: crypto.randomBytes(Math.ceil(saltLength)).toString('hex')
   },
   password: { type: String, required: true },
   tokens: [
     {
-      type: String,
-    },
+      type: String
+    }
   ],
   scoredMovies: [{ type: Object, name: { type: String }, score: { type: Number } }],
   userDetails: {
@@ -27,7 +27,7 @@ module.exports = new Schema({
       required: true,
       validate(value) {
         return emailRegex.test(value)
-      },
-    },
-  },
+      }
+    }
+  }
 })

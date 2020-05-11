@@ -12,7 +12,6 @@ module.exports = async (req, res, next) => {
 
     res.locals.token = await user.generateAuthToken()
     res.locals.user = user
-
     next()
   } catch (e) {
     const status = saveUserErrorStatusesSwitch(e)

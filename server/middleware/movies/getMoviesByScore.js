@@ -11,9 +11,8 @@ module.exports = async (req, res, next) => {
     const queryObj = { 'averageScoreObj.average': convertEdges({ min, max }) }
 
     const sortBy = { 'averageScoreObj.average': reqSortBy }
-
+    
     res.locals.movies = await moviesScores.find(queryObj).sort(sortBy)
-        
     next()
   } catch (e) {
     next()

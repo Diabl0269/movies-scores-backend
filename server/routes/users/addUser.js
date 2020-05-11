@@ -4,7 +4,7 @@ const addUser = require('../../middleware/users/addUser')
 
 module.exports = router.post('/', addUser, (req, res) => {
   const {
-    locals: { token, user },
+    locals: { token, user }
   } = res
 
   if (!(token || user)) return res.sendStatus(500)
